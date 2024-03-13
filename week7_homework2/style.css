@@ -1,0 +1,448 @@
+/* Шрифты */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/montserrat-v26-latin-regular.woff2) format('woff2'); 
+}
+
+@font-face {
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./fonts/montserrat-v26-latin-500.woff2) format('woff2'); 
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/rubik-v28-latin-regular.woff2) format('woff2'); 
+}
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./fonts/rubik-v28-latin-500.woff2) format('woff2'); 
+}
+
+/* overall settings */
+
+html {
+    box-sizing: border-box;
+}  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    display: grid;
+    grid-template-rows: 15% 1fr 15%;
+    margin: 0 auto;
+    max-width: 1366px;
+    background: #fefcfa;
+    font-family: 'Montserrat', sans-serif;
+    color: #122659;
+}
+
+/* Header Start */
+.header,
+.menu-list {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+}
+.menu-item,
+.phone_number,
+.menu-item a{
+    list-style-type: none;
+    margin-right: 20px;
+    margin-top: 46px;
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #122659;
+}
+.logoimage{
+    margin-left: 20%;
+}
+.menu-item{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+}
+/* Header END */
+/* Первый блок начало */
+.main_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 512px;
+    background: url(./assets/mainphoto.png) no-repeat center;
+    background-size: cover;
+}
+.main_info_container{
+    margin-left: 15%;
+    max-width: 375px;
+}
+.main_info h1{
+    margin-top: 136px;
+    margin-bottom: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 140%;
+
+}
+.main_info_container h2{
+    margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+
+}
+.main_info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+}
+
+button{
+    border-radius: 35px;
+    width: 166px;
+    height: 50px;
+    margin-top: 45px;
+    background: #ffd787;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+/* Бургер */
+.header_burger{
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+.burger_line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:#8dd9e5;
+    position: absolute;
+    left: 0;  
+}
+.burger_line_first{
+    top: 0;
+}
+.burger_line_third{
+    bottom: 0;
+}
+.burger_line_second{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Второй блок начало */
+.lessons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-gap: 68px ;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 130px;
+}
+.lessons_heading{
+    grid-column: 1/3;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+
+}
+.first_lesson h3,
+.second_lesson h3,
+.principle_item h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+
+}
+.first_lesson p,
+.principle_item p,
+.groups_heading p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+
+}
+.second_lesson img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Третий блок начало*/
+.principles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 130px;
+}
+.principle_item:last-child{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+/* Четвертый блок начало*/
+.groups_wrapper {
+    display: grid;
+    min-height: 500px;
+    background-image: url(./assets/backbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin-top: 180px;
+}
+.groups{
+    margin-left: 15%;
+    margin-right: 15%;
+    min-height: 803px;
+    
+}
+
+.groups_heading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    margin-top: 180px;
+}
+.groups_heading h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 140%;
+}
+.groups_heading p{
+    max-width: 298px;
+}
+.groups_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+    grid-gap: 10px;
+
+}
+.group_card ul li{
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+}
+
+/* Карточки внутреннее содержание */
+.group_card_title{
+    margin-bottom: 35px;
+    margin-top: 45px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+}
+.group_card {
+    border: 3px solid #8dd9e5;
+    border-radius: 12px;
+    width: 206px;
+    height: 295px;
+
+}
+.card_botton {
+    border-radius: 35px;
+    width: 152px;
+    height: 44px;
+    background: #8dd9e5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+.botton2 {
+    background: #ffd787;
+}
+.botton3{
+    background: #feb9cc;
+}
+.card2{
+    border: 3px solid #ffd787;
+}
+.card3{
+    border: 3px solid #feb9cc;
+
+}
+
+
+/* Футер */
+.footer{
+    height:50px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    background: #fefcfa;
+}
+.policy a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #122659;
+    background: #fefcfa;
+}
+
+/* Медиа запросы */
+/* Первый медиа запрпос */
+@media (max-width: 700px) {
+    .main_info {
+    background-image: none;
+    background-color: #fefcfa;
+    min-height: 300px;
+    }
+    .main_info h1{
+        margin-top: 10px;
+    }
+    .lessons{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10px;
+    }
+    .principles{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 80px;
+        justify-items: center;
+    
+    }
+    .principle_item p{
+        margin-bottom: 10px;
+    }
+    .principle_item img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+    .groups_heading,
+    .groups_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+    .groups_wrapper {
+
+    margin-top: 10px;
+}
+}
+/* Второй медиа запрпос */
+@media screen and (max-width: 500px){
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header,
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
+.logoimage{
+    margin-left: 0;
+    margin-top: 10px;
+}
+.phone_number{
+    list-style-type: none;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+}
+
+/* Запрос с бургером */
+@media screen and (max-width: 1024px) {
+    .header_burger{
+        display: block;
+    }
+    .menu{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(197, 191, 191);
+        z-index:10 ;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: .2s all linear;
+    }
+    .menu_active{
+        transform: translateX(0);
+    }
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-item{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .menu-list a{
+        font-size: 22px;
+        line-height: 140%;
+    }
+    .menu_close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px ;
+        z-index: 11;
+    }
+    .menu_close_line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #122659;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+    .menu_close_line:first-child{
+    transform: translateY(-50%) rotate(45deg);
+}
+    .menu_close_line:last-child{
+    transform: translateY(-50%) rotate(-45deg);
+}
+}

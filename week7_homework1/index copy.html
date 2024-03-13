@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+
+        }
+        .header{
+            background-color: aquamarine;
+            grid-area: header;
+            
+        }
+        .sidebar{
+            background-color: bisque;
+            grid-area: sidebar;
+        }
+        .main{
+            display: grid;
+            background-color: cadetblue;
+            grid-area: main;
+        
+        }
+        .footer{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            grid-area: footer;
+            background-color: rgb(138, 99, 103);
+            padding-bottom: 10px;
+        }
+        .footer-section{
+            background-color: darkgrey;
+            border: 1px solid rgb(0, 94, 255);
+            margin: 10px;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 1fr 8fr 1fr;
+            height: 90vh;
+            grid-template-areas: 
+            "header header header header"
+            "main main main sidebar"
+            "footer footer footer footer";
+        }
+        .main-section1,
+        .main-section2,
+        .main-section3 {
+            background-color: beige;
+            border: 1px solid rgb(0, 94, 255);
+        }
+        .section-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 10px;
+            margin: 10px;  
+        }
+        .main-section3{
+            grid-column: 1/3;
+        }
+
+/* Медиа запросы - начало */
+        @media screen and (max-width: 320px) {
+            .footer {
+                display: none;
+            }
+            .container,
+            .section-wrapper{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 768px) and (min-width: 321px) {
+            .section-wrapper,
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Гриды</h1>
+    <div class="container">
+        <header class="header">header</header>
+        <main class="main">content
+            <div class="section-wrapper">
+                <div class="main-section1">1</div>
+                <div class="main-section2">2</div>
+                <div class="main-section3">3</div>
+            </div>
+        </main>
+        <aside class="sidebar">sidebar</aside>
+        <footer class="footer">
+            <div class="footer-section">первая секция футера</div>
+            <div class="footer-section">вторая секция футера</div>
+            <div class="footer-section">третья секция футера</div>
+        </footer>
+    </div>
+
+</body>
+</html>
